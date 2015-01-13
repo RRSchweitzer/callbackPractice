@@ -24,9 +24,14 @@ and what you should write is the favNum function that makes the code above work,
 
 
 
-  //Code Here for first
-  
+var first = function(array, callback) {
+  var theItem = array[0];
+  callback(theItem);
+}
+
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+debugger;
+
 first(names, function(firstName){
   console.log('The first name in names is ', firstName)
 });
@@ -38,7 +43,12 @@ first(names, function(firstName){
 
 
 
-  //Code Here for last
+var last = function(array, callback) {
+  var thing = array[array.length - 1];         //array.length = 7 therefore subtracting 1 will put me at the end of teh array.
+  callback(thing);
+}
+
+
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 last(names, function(lastName){
@@ -56,7 +66,10 @@ last(names, function(lastName){
 
 
 
-  //Code Here for multiply
+  var multiply = function(num1, num2, callback) {
+  var answer = num1 * num2;
+  callback(answer );
+};
 
 multiply(4, 3, function(answer){
   console.log('The answer is ', answer); //should console.log 12
@@ -72,11 +85,15 @@ multiply(4, 3, function(answer){
 
 
 
-  //Code Here for contains
+  var contains = function(array, findString, callback) {
+    
+
+  }
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
-contains(names, 'Colt', function(yes){
-  if(yes === true){
+
+contains(names, 'Colt', function(result){
+  if(result === true){
     'Colt is in the array';
   } else {
     'Colt is not in the array';
@@ -92,7 +109,7 @@ contains(names, 'Colt', function(yes){
 
 
 
-    //Code Here for uniq
+var uniq = 
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
